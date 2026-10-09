@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morton Millworks — Custom CNC Fabrication, Colorado Springs</title>
+<meta name="description" content="Owner-designed, shop-built CNC fabrication in Colorado Springs, CO. Custom millwork, signage, furniture, and prototyping.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Vollkorn:ital,wght@0,400;0,500;1,400;1,500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="sitenav">
+  <a href="index.html" class="current">Home</a>
+  <a href="gallery.html">Work</a>
+</nav>
+
+<header class="hero">
+  <div class="ticks" aria-hidden="true">
+    <i style="top:0; left:25%; width:1px; height:12px;"></i>
+    <i style="top:0; left:50%; width:1px; height:12px;"></i>
+    <i style="top:0; left:75%; width:1px; height:12px;"></i>
+  </div>
+
+  <div class="mark" aria-hidden="true">
+    <svg viewBox="0 0 34 30" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="17" cy="5" r="2.3" fill="none" stroke="#24402F" stroke-width="1.5"/>
+      <line x1="17" y1="7.3" x2="8" y2="26" stroke="#24402F" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="17" y1="7.3" x2="26" y2="26" stroke="#24402F" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="10.5" y1="16.5" x2="23.5" y2="16.5" stroke="#B08642" stroke-width="1.3" stroke-linecap="round"/>
+      <line x1="8" y1="26" x2="6.5" y2="29" stroke="#24402F" stroke-width="1.1" stroke-linecap="round"/>
+      <rect x="24.5" y="24.5" width="3" height="4" rx="0.5" fill="#24402F"/>
+    </svg>
+  </div>
+
+  <h1 class="wordmark">
+    <span class="m1">Morton</span>
+    <span class="m2">Millworks</span>
+  </h1>
+
+  <div class="rule-brass"></div>
+
+  <p class="tagline">Custom Millwork &middot; Veteran Owned &middot; Colorado Springs, CO</p>
+  <p class="hero-note">Every piece designed and built in-house.</p>
+</header>
+
+<section class="wrap" id="services">
+  <h2>Services</h2>
+  <ul class="services">
+    <li>Custom CNC Fabrication</li>
+    <li>Signage</li>
+    <li>Furniture &amp; Cabinetry</li>
+    <li>Musical Instruments</li>
+    <li>Prototyping</li>
+  </ul>
+</section>
+
+<section class="wrap" id="about">
+  <h2>About</h2>
+  <p class="about-placeholder">[ About copy goes here — pinned for a future pass. ]</p>
+</section>
+
+<section class="wrap" id="work">
+  <h2>Recent Work</h2>
+  <div class="work-grid">
+    <div class="photo-slot">
+      <img src="images/dragon-panel.jpg" alt="Hand-painted carved dragon panel, Morton Millworks" loading="lazy">
+      <span>Carved &amp; Painted Panel</span>
+    </div>
+    <div class="photo-slot">
+      <img src="images/oz-book-box.jpg" alt="Engraved wood keepsake box, Morton Millworks" loading="lazy">
+      <span>Engraved Keepsake Box</span>
+    </div>
+    <div class="photo-slot">
+      <img src="images/med-spa-sign.jpg" alt="Monumental Med Spa wood sign, Morton Millworks" loading="lazy">
+      <span>Business Signage</span>
+    </div>
+  </div>
+  <p class="work-more"><a href="gallery.html">See the full gallery &rarr;</a></p>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <h2>Get In Touch</h2>
+    <a class="contact-email" href="mailto:andrew@mortonmillworks.com">andrew@mortonmillworks.com</a>
+    <div class="contact-block">
+      50 Mount View Lane Unit D<br>
+      Colorado Springs CO 80907<br>
+      720 280 2659
+    </div>
+  </div>
+</section>
+
+<footer>&copy; <span id="year"></span> Morton Millworks</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

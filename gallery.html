@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work — Morton Millworks</title>
+<meta name="description" content="Shop work from Morton Millworks — custom CNC fabrication, signage, and millwork, Colorado Springs, CO.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Vollkorn:ital,wght@0,400;0,500;1,400;1,500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="sitenav">
+  <a href="index.html">Home</a>
+  <a href="gallery.html" class="current">Work</a>
+</nav>
+
+<header class="gallery-hero">
+  <h1>Shop Work</h1>
+  <p>A running record — new pieces get added as they're finished.</p>
+</header>
+
+<section class="wrap" style="padding-top:40px;">
+  <div class="gallery-grid" id="gallery"></div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <h2>Get In Touch</h2>
+    <a class="contact-email" href="mailto:andrew@mortonmillworks.com">andrew@mortonmillworks.com</a>
+    <div class="contact-block">
+      50 Mount View Lane Unit D<br>
+      Colorado Springs CO 80907<br>
+      720 280 2659
+    </div>
+  </div>
+</section>
+
+<footer>&copy; <span id="year"></span> Morton Millworks</footer>
+
+<script>
+  // ---- Add new work here. Newest first is a fine convention, not required.
+  // Each entry: { src: "images/filename.jpg", alt: "short description", caption: "Label shown on the card" }
+  const WORKS = [
+    { src: "images/dragon-panel.jpg",            alt: "Hand-painted carved dragon panel",        caption: "Carved & Painted Panel" },
+    { src: "images/oz-book-box.jpg",              alt: "Engraved wood keepsake box",               caption: "Engraved Keepsake Box" },
+    { src: "images/med-spa-sign.jpg",             alt: "Monumental Med Spa wood sign",             caption: "Business Signage" },
+    { src: "images/vintage-book-shoppe-sign.jpg", alt: "Vintage Book Shoppe routed wood sign",      caption: "Vintage Book Shoppe Sign" },
+    { src: "images/burdick-sign.jpg",             alt: "Burdick Mushrooms engraved sign",           caption: "Custom Business Sign" },
+    { src: "images/space-wall-art.jpg",           alt: "Space-themed modular wall art",             caption: "Modular Wall Art" },
+    { src: "images/lego-table.jpg",               alt: "Kids' LEGO building table with turntable",  caption: "Custom Build Table" },
+    { src: "images/cnc-dragon-cutting.jpg",       alt: "CNC router mid-cut on the dragon panel",    caption: "On the CNC" },
+    { src: "images/cnc-door-panel.jpg",           alt: "CNC router cutting a raised-panel door",    caption: "On the CNC" },
+    { src: "images/carving-detail.jpg",           alt: "Close-up of a carved mold and badge detail",caption: "Detail Work" },
+  ];
+
+  const grid = document.getElementById('gallery');
+  grid.innerHTML = WORKS.map(w => `
+    <figure class="gallery-item">
+      <div class="frame">
+        <img src="${w.src}" alt="${w.alt}" loading="lazy">
+      </div>
+      <figcaption>${w.caption}</figcaption>
+    </figure>
+  `).join('');
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -310,3 +310,34 @@
   border-top:1px solid var(--line);
 }
 .gallery-item{margin:0;}
+
+/* ---- Capabilities ---- */
+.cap-lead{margin:0 0 28px;font-style:italic;color:var(--muted);font-size:15px;}
+.cap-machine{margin-bottom:40px;}
+.cap-machine:last-child{margin-bottom:0;}
+.cap-machine h3{
+  font-family:'Oswald',sans-serif;
+  font-weight:600;
+  font-size:20px;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--ink);
+  margin:0 0 4px;
+}
+.cap-spec{
+  font-family:'Oswald',sans-serif;
+  font-size:12px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--brass);
+  margin:0 0 12px;
+}
+.cap-machine p{margin:0 0 14px;}
+.cap-photos{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin:18px 0 0;
+}
+@media (max-width:560px){.cap-photos{grid-template-columns:1fr;}}
+.cap-photos .photo-slot{margin:0;}

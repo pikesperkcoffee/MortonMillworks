@@ -1,161 +1,592 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Morton Millworks — Custom Millwork &amp; Fabrication, Colorado Springs</title>
-<meta name="description" content="Owner-designed, shop-built custom millwork and fabrication in Colorado Springs, CO. Signage, furniture, musical instruments, and one-of-a-kind pieces.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Vollkorn:ital,wght@0,400;0,500;1,400;1,500&display=swap">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Morton Millworks | Custom Millwork &amp; Fabrication, Colorado Springs</title><meta name="description" content="Owner-designed, shop-built custom millwork and fabrication in Colorado Springs, CO. Signs, furniture, doors, carving, and one-of-a-kind pieces."><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 30'%3E%3Crect width='34' height='30' fill='%23F1E9D8'/%3E%3Cg fill='none' stroke='%2324402F' stroke-linecap='round' stroke-width='2'%3E%3Ccircle cx='17' cy='5' r='2.3'/%3E%3Cline x1='17' y1='7.3' x2='8' y2='26'/%3E%3Cline x1='17' y1='7.3' x2='26' y2='26'/%3E%3Cline x1='10.5' y1='16.5' x2='23.5' y2='16.5' stroke='%23B08642'/%3E%3C/g%3E%3C/svg%3E"><meta property="og:title" content="Morton Millworks"><meta property="og:description" content="Custom millwork and fabrication, Colorado Springs, CO."><meta property="og:image" content="https://mortonmillworks.com/images/vault-door-finished.jpg"><meta property="og:url" content="https://mortonmillworks.com/"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Vollkorn:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<style>
+:root{
+  --paper:#F1E9D8; --paper-deep:#E8DEC8; --paper-hi:#F8F3E6;
+  --ink:#2A241D; --muted:#6A604E;
+  --green:#24402F; --green-deep:#17271D;
+  --brass:#B08642; --brass-ink:#7A561B; --brass-lite:#D8B574; --soft:#CFC6B0;
+  --line:rgba(36,64,47,.35); --line-lt:rgba(241,233,216,.32);
+  --maxw:1120px; --gut:clamp(18px,4.4vw,36px);
+  --display:'Oswald','Avenir Next Condensed','Arial Narrow',sans-serif;
+  --body:'Vollkorn',Georgia,'Times New Roman',serif;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .16 0 0 0 0 .13 0 0 0 0 .09 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+html.lb-open{overflow:hidden}
+body{margin:0;background:var(--paper) var(--grain);color:var(--ink);font:400 17px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,figure,dl,dd{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+img,video{display:block;max-width:100%;height:auto}
+a{color:var(--green);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--brass-ink);outline-offset:3px}
+.on-dark :focus-visible,.lb :focus-visible{outline-color:var(--brass-lite)}
+.skip:not(:focus){position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip:focus{position:fixed;left:12px;top:12px;z-index:100;background:var(--green);color:var(--paper);padding:12px 16px;font:600 13px var(--display);letter-spacing:.12em;text-transform:uppercase}
+.wrap{width:min(var(--maxw),100% - 2*var(--gut));margin-inline:auto}
+section[id]{scroll-margin-top:76px}
 
-<header class="hero">
-  <div class="ticks" aria-hidden="true">
-    <i style="top:0; left:25%; width:1px; height:12px;"></i>
-    <i style="top:0; left:50%; width:1px; height:12px;"></i>
-    <i style="top:0; left:75%; width:1px; height:12px;"></i>
+/* ---- header: every top-level link stays visible, on phones too ---- */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(241,233,216,.97);border-top:8px solid var(--green);border-bottom:1px solid var(--line)}
+.bar-in{display:flex;align-items:center;gap:6px;min-height:58px}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto;color:var(--green);text-decoration:none;font:700 15px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.brand svg{width:27px;height:24px;flex:none}
+.bar nav ul{display:flex}
+.bar nav a{position:relative;display:block;padding:19px 10px;white-space:nowrap;color:var(--ink);text-decoration:none;font:500 12px/1 var(--display);letter-spacing:.14em;text-transform:uppercase}
+.bar nav a:hover{color:var(--brass-ink)}
+.bar nav a[aria-current]{color:var(--green)}
+.bar nav a[aria-current]::after{content:"";position:absolute;left:10px;right:10px;bottom:10px;height:2px;background:var(--brass)}
+.bar .bar-quote{display:none}
+@media(max-width:639px){.brand span{display:none}}
+@media(max-width:359px){.bar nav a{padding-inline:7px;letter-spacing:.1em}.bar nav a[aria-current]::after{left:7px;right:7px}}
+@media(min-width:760px){.bar .bar-quote{display:inline-flex}}
+
+/* ---- buttons ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border:2px solid var(--green);background:var(--green);color:var(--paper);font:600 13px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.btn:hover{background:var(--green-deep);border-color:var(--green-deep)}
+.btn-line{background:transparent;color:var(--green)}
+.btn-line:hover{background:var(--green);color:var(--paper)}
+.btn-sm{min-height:44px;padding:0 16px;font-size:12px}
+.on-dark .btn{background:var(--brass);border-color:var(--brass);color:var(--ink)}
+.on-dark .btn:hover{background:var(--brass-lite);border-color:var(--brass-lite)}
+.on-dark .btn-line{background:transparent;color:var(--paper);border-color:var(--line-lt)}
+.on-dark .btn-line:hover{background:var(--paper);color:var(--green-deep);border-color:var(--paper)}
+
+/* ---- phone action bar: the two things a visitor most needs, always one tap away ---- */
+.dock{display:none}
+@media(max-width:859px){
+  .dock{position:fixed;left:0;right:0;bottom:0;z-index:25;display:flex;gap:10px;padding:10px var(--gut) calc(10px + env(safe-area-inset-bottom,0px));background:rgba(241,233,216,.98);border-top:1px solid var(--line);box-shadow:0 -6px 18px rgba(23,39,29,.12);transition:transform .2s ease,visibility 0s}
+  .dock.away{transform:translateY(115%);visibility:hidden;transition:transform .2s ease,visibility 0s .2s}
+  .dock .btn{flex:1 1 0;min-width:0;padding:0 10px;font-size:12px;letter-spacing:.1em;white-space:nowrap}
+  .dock .btn:first-child{flex:1.5 1 0}
+}
+@media(max-width:359px){
+  body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+}
+
+/* ---- section scaffolding ---- */
+.on-dark{color:var(--paper)}
+.on-dark a{color:var(--paper);text-decoration-color:var(--brass)}
+.sec{padding-block:clamp(52px,8vw,96px)}
+.band-deep{background:var(--paper-deep) var(--grain)}
+.band-night{background:var(--green-deep) var(--grain)}
+.band-green{background:var(--green) var(--grain)}
+.sec-head{margin-bottom:clamp(28px,4vw,46px)}
+h2.label{display:flex;align-items:center;gap:14px;margin-bottom:16px;font:600 13px/1.2 var(--display);letter-spacing:.18em;text-transform:uppercase;color:var(--brass-ink)}
+h2.label::after{content:"";flex:1;height:9px;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+.on-dark h2.label{color:var(--brass-lite)}
+.on-dark h2.label::after{border-color:var(--line-lt)}
+.sec-title{max-width:24ch;font:500 clamp(28px,4.4vw,46px)/1.12 var(--body);letter-spacing:-.005em;text-wrap:balance}
+.lead{margin-top:14px;max-width:60ch;color:var(--muted);font-style:italic;font-size:18px}
+.on-dark .lead{color:var(--soft)}
+figcaption{padding-top:10px;font:500 11px/1.4 var(--display);letter-spacing:.1em;text-transform:uppercase}
+figcaption b{margin-right:.5em;font-weight:600;color:var(--brass-ink)}
+.on-dark figcaption{color:var(--soft)} .on-dark figcaption b{color:var(--brass-lite)}
+
+/* ---- hero: a framed drawing sheet with a title block ---- */
+.hero{padding-block:clamp(18px,3vw,34px) clamp(34px,5vw,60px)}
+.sheet{position:relative;border:3px solid var(--green)}
+.sheet::before{content:"";position:absolute;inset:7px;border:1px solid var(--green);opacity:.45;pointer-events:none}
+.ticks i{position:absolute;top:0;width:1px;height:12px;background:var(--green);opacity:.45}
+.hero-grid{display:grid;gap:clamp(26px,4vw,52px);align-items:center;padding:clamp(30px,5vw,56px) clamp(20px,4vw,52px)}
+@media(min-width:900px){.hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.04fr)}}
+.hero-copy{text-align:center}
+.wordmark{padding-left:.14em;font:700 1em/.95 var(--display);letter-spacing:.14em;text-transform:uppercase}
+.wordmark span{display:block}
+.m1{font-size:clamp(46px,8.4vw,84px);color:var(--green)}
+.m2{margin-top:2px;font-size:clamp(36px,6.7vw,67px);color:var(--ink)}
+.centerline{display:flex;align-items:center;justify-content:center;gap:16px;max-width:420px;margin:24px auto 20px}
+.centerline i{flex:1;border-top:1px solid var(--brass)}
+.centerline svg{width:44px;height:39px;color:var(--green)}
+.nb{white-space:nowrap}
+.tagline,.hero-note{text-wrap:balance}
+.tagline{font-style:italic;font-weight:500;font-size:clamp(16px,2vw,19px);color:var(--muted)}
+.hero-note{margin-top:10px;font-size:clamp(18px,2.1vw,21px)}
+.cta-row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.plates{display:grid;grid-template-columns:42fr 58fr;grid-template-rows:1fr 1fr;gap:12px;height:clamp(300px,50vw,500px)}
+.plates figure{position:relative;overflow:hidden;background:var(--paper-deep);outline:1px solid var(--green);outline-offset:3px}
+.plates figure:first-child{grid-row:1/3}
+.plates a{position:absolute;inset:0;display:block;cursor:zoom-in}
+.plates img{width:100%;height:100%;object-fit:cover}
+.titleblock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--green)}
+.titleblock div{padding:14px clamp(12px,2vw,22px) 18px;border-left:1px solid var(--line)}
+.titleblock div:first-child{border-left:0}
+.titleblock dt{font:500 10px/1.2 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--brass-ink)}
+.titleblock dd{margin-top:5px;font:600 clamp(14px,1.7vw,17px)/1.25 var(--display);letter-spacing:.04em;text-transform:uppercase}
+@media(max-width:699px){
+  .titleblock{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .titleblock div:nth-child(3){border-left:0}
+  .titleblock div:nth-child(n+3){border-top:1px solid var(--line)}
+}
+
+/* ---- services: a ruled schedule; each line leads somewhere ---- */
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line);background:var(--paper-hi)}
+.svc li{min-width:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.svc-a{display:flex;align-items:center;gap:16px;height:100%;min-height:80px;padding:16px 22px;color:var(--ink);text-decoration:none;transition:background .15s}
+.svc-a:hover{background:var(--paper)}
+.svc-t{display:grid;gap:5px;min-width:0}
+.svc-t b{font:500 clamp(16px,1.8vw,19px)/1.2 var(--display);letter-spacing:.04em;text-transform:uppercase}
+.svc-t small{font:500 11px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--brass-ink)}
+.svc-a:hover small{text-decoration:underline;text-underline-offset:3px}
+.ic{flex:none;width:34px;height:34px;fill:none;stroke:var(--brass-ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.svc-cta{margin-top:26px;font-size:18px}
+@media(max-width:820px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.svc{grid-template-columns:1fr}}
+
+/* ---- work: filter, then photos that keep their real proportions ---- */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 16px;border:1px solid var(--green);background:transparent;color:var(--green);font:600 12px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s}
+.chip span{margin-left:.35em;font-weight:500;opacity:.75}
+.chip:hover{background:rgba(36,64,47,.08)}
+.chip[aria-pressed="true"]{background:var(--green);color:var(--paper)}
+.status{margin-top:14px;color:var(--muted);font-style:italic}
+.status:empty{display:none}
+.story a,.machine a,.mfig a{display:block;background:var(--paper-deep);outline:1px solid var(--green);outline-offset:4px;cursor:zoom-in}
+.story a:hover,.machine a:hover,.mfig a:hover{outline-color:var(--brass-ink);outline-width:2px}
+.story{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,8fr);gap:clamp(20px,4vw,48px);align-items:start;padding-block:0 clamp(26px,4vw,40px)}
+.story:not([hidden]) ~ .story:not([hidden]){padding-top:clamp(26px,4vw,40px);border-top:1px solid var(--line)}
+.story h3,.machine h3{font:600 clamp(20px,2.4vw,26px)/1.15 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.story-txt p{margin-top:10px;color:var(--muted);font-style:italic}
+.srow{display:flex;gap:16px;align-items:flex-start}
+.srow figure{flex:var(--r) 1 0;min-width:0}
+.srow img{width:100%;height:auto}
+.sub{margin:clamp(40px,6vw,64px) 0 22px;padding-top:clamp(26px,4vw,40px);border-top:1px solid var(--green);font:600 13px/1.2 var(--display);letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
+#g-stories{margin-top:clamp(26px,4vw,40px)}
+#g-stories .sub{margin-top:0;padding-top:0;border-top:0}
+.masonry{columns:3;column-gap:26px}
+.mfig{break-inside:avoid;margin:0 0 28px;padding:5px}
+.mfig img{width:100%;height:auto}
+@media(max-width:899px){
+  .story{grid-template-columns:1fr}
+  .srow{overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:var(--gut);margin-inline:calc(-1*var(--gut));padding:8px var(--gut) 12px}
+  .srow figure{flex:0 0 auto;scroll-snap-align:start}
+  .srow img{width:auto;max-width:none;height:min(48vw,200px)}
+  .masonry{columns:2;column-gap:16px}
+}
+
+/* ---- video: a play button and the length, like the sites people already know ---- */
+.clips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,3vw,36px);max-width:940px;margin-inline:auto}
+.vbox{position:relative;outline:1px solid var(--brass);outline-offset:4px}
+.vbox video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000}
+.vplay{position:absolute;inset:0;display:grid;place-items:center;border:0;padding:0;background:linear-gradient(to top,rgba(23,39,29,.55),rgba(23,39,29,0) 45%);color:var(--paper);cursor:pointer}
+.vplay svg{width:68px;height:68px;fill:rgba(23,39,29,.55);stroke:var(--paper);stroke-width:1.6;transition:transform .15s}
+.vplay svg path{fill:var(--paper);stroke:none}
+.vplay:hover svg{transform:scale(1.06)}
+.vplay span{position:absolute;right:10px;bottom:10px;padding:3px 7px;background:rgba(23,39,29,.82);font:600 12px/1.3 var(--display);letter-spacing:.06em}
+.vbox.on .vplay{display:none}
+@media(max-width:760px){
+  .clips{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gut);gap:20px;max-width:none;margin-inline:calc(-1*var(--gut));padding:8px var(--gut) 14px}
+  .clip{flex:0 0 min(66vw,290px);scroll-snap-align:start}
+}
+
+/* ---- the shop ---- */
+.machine{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,7fr);gap:clamp(22px,4vw,52px);align-items:start;padding-block:clamp(26px,4vw,40px);border-top:1px solid var(--line)}
+.machine:first-of-type{border-top:0;padding-top:0}
+.spec{margin:14px 0 16px}
+.spec b{display:block;font:700 clamp(30px,4.2vw,42px)/1 var(--display);letter-spacing:.02em;color:var(--green)}
+.dimline{display:block;height:9px;margin:9px 0 6px;border:1px solid var(--brass-ink);border-top:0}
+.spec small{font:500 12px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--brass-ink)}
+.m-txt>p:last-child{max-width:46ch}
+@media(max-width:899px){.machine{grid-template-columns:1fr}}
+.cnc-more{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,7fr);gap:clamp(22px,4vw,52px);margin-top:clamp(18px,3vw,30px);padding-top:clamp(28px,4vw,40px);border-top:1px solid var(--green)}
+.cnc-more h3{font:600 clamp(20px,2.4vw,26px)/1.15 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.sched{columns:2;column-gap:40px;counter-reset:s}
+.sched li{counter-increment:s;break-inside:avoid;display:flex;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font:500 15px/1.3 var(--display);letter-spacing:.04em;text-transform:uppercase}
+.sched li::before{content:counter(s,decimal-leading-zero);flex:none;min-width:24px;padding-top:2px;font-size:12px;color:var(--brass-ink)}
+.irons{margin-top:22px;font-size:17px}
+.irons b{display:block;margin-bottom:4px;font:600 12px/1.2 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--brass-ink)}
+@media(max-width:899px){.cnc-more{grid-template-columns:1fr}}
+@media(max-width:560px){.sched{columns:1}}
+
+/* ---- about, questions ---- */
+.about-grid,.faq-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,72px);align-items:start}
+.prose{font-size:clamp(17px,1.5vw,19px)}
+.prose p{max-width:62ch} .prose p+p{margin-top:1em}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;padding:14px 0;cursor:pointer;list-style:none;font:500 clamp(16px,1.8vw,19px)/1.25 var(--display);letter-spacing:.04em;text-transform:uppercase}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font:400 28px/1 var(--display);color:var(--brass-ink)}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{max-width:58ch;padding-bottom:20px}
+.faq-more{margin-top:20px}
+@media(max-width:859px){.about-grid,.faq-grid{grid-template-columns:1fr}}
+
+/* ---- contact ---- */
+.contact-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(34px,6vw,76px)}
+.frow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}
+.f{display:grid;gap:7px;margin-bottom:16px;min-width:0}
+.f label{font:500 12px/1.2 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.f input,.f select,.f textarea{width:100%;min-height:48px;padding:12px 14px;border:1px solid var(--paper-deep);border-radius:0;background:var(--paper-hi);color:var(--ink);font:400 17px/1.3 var(--body)}
+.f textarea{min-height:140px;resize:vertical}
+.f ::placeholder{color:var(--muted);opacity:1}
+.f input:focus-visible,.f select:focus-visible,.f textarea:focus-visible{outline:3px solid var(--brass-lite);outline-offset:2px}
+.tip{margin:-6px 0 18px;color:var(--soft);font-size:15px;font-style:italic}
+.hint{margin-top:12px;color:var(--soft);font-size:15px;font-style:italic}
+.ok,.draft{margin-top:14px;padding:14px 16px;border:1px solid var(--brass-lite);color:var(--paper);font-size:16px}
+.draft{margin:0 0 18px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;font-size:15px}
+.linkbtn{padding:10px 0;border:0;background:none;color:var(--paper);font:500 11px/1.4 var(--display);letter-spacing:.1em;text-transform:uppercase;text-decoration:underline;text-decoration-color:var(--brass);text-underline-offset:3px;cursor:pointer}
+.c-info h3{font:600 12px/1.2 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--brass-lite)}
+.c-info p{margin:5px 0 22px;font-size:19px}
+.map{margin:6px 0 14px;border:1px solid var(--line-lt)}
+.map iframe{display:block;width:100%;height:230px;border:0}
+.map-fallback{display:grid;place-content:center;gap:12px;min-height:230px;padding:16px;text-align:center;background:var(--green-deep);color:var(--soft);font-size:15px}
+@media(max-width:859px){.contact-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.frow{grid-template-columns:1fr}}
+
+/* ---- footer ---- */
+.foot{padding:20px 0 30px;border-top:1px solid var(--line-lt);background:var(--green-deep) var(--grain);color:var(--soft)}
+.foot .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 24px}
+.foot small,.foot a{font:500 11px/1.4 var(--display);letter-spacing:.1em;text-transform:uppercase}
+.foot-links{display:flex;flex-wrap:wrap;align-items:center;gap:4px 22px}
+.foot a{display:inline-block;padding:10px 0}
+
+/* ---- photo viewer: counter, big photo, thumbnails of the whole set, and a way to ask ---- */
+dialog.lb{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:var(--green-deep);color:var(--paper);overflow:hidden}
+dialog.lb[open]{display:flex;flex-direction:column}
+.lb::backdrop{background:rgba(23,39,29,.96)}
+.lb-top{display:flex;align-items:center;justify-content:space-between;padding:10px 12px 0 18px}
+.lb-n{font:500 11px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.lb-btn{display:grid;place-items:center;width:48px;height:48px;padding:0;border:1px solid var(--line-lt);background:rgba(23,39,29,.7);color:var(--paper);font:400 28px/1 var(--display);cursor:pointer}
+.lb-btn:hover{border-color:var(--brass-lite);color:var(--brass-lite)}
+.lb-stage{position:relative;flex:1 1 0;min-height:0;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);place-items:center;padding:6px clamp(60px,8vw,96px)}
+.lb-stage img{max-width:100%;max-height:100%;min-height:0;width:auto;height:auto;object-fit:contain;outline:1px solid var(--brass-lite);outline-offset:4px}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%)}
+.lb-prev{left:10px} .lb-next{right:10px}
+.lb-info{padding:12px 16px 4px;text-align:center}
+.lb-cap{font:500 12px/1.4 var(--display);letter-spacing:.1em;text-transform:uppercase}
+.lb-act{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:12px}
+.lb-strip{display:flex;gap:8px;overflow-x:auto;padding:12px 16px calc(14px + env(safe-area-inset-bottom,0px));scroll-snap-type:x proximity}
+.lb-th{flex:none;width:68px;height:50px;padding:0;border:1px solid var(--line-lt);background:none;opacity:.6;cursor:pointer;scroll-snap-align:center}
+.lb-th img{width:100%;height:100%;object-fit:cover}
+.lb-th[aria-current]{opacity:1;outline:2px solid var(--brass-lite);outline-offset:1px}
+@media(max-width:600px){
+  .lb-stage{padding:6px 6px}
+  .lb-prev,.lb-next{width:44px;height:44px;background:rgba(23,39,29,.55)}
+  .lb-prev{left:4px} .lb-next{right:4px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="mark" viewBox="0 0 34 30"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><circle cx="17" cy="5" r="2.3"/><line x1="17" y1="7.3" x2="8" y2="26"/><line x1="17" y1="7.3" x2="26" y2="26"/><line x1="10.5" y1="16.5" x2="23.5" y2="16.5" stroke="#B08642" stroke-width="1.3"/><line x1="8" y1="26" x2="6.5" y2="29" stroke-width="1.1"/></g><rect x="24.5" y="24.5" width="3" height="4" rx=".5" fill="currentColor"/></symbol>
+<symbol id="i-fab" viewBox="0 0 32 32"><path d="M16 3l11.5 6.5v13L16 29 4.5 22.5v-13z"/><circle cx="16" cy="16" r="4.5"/></symbol>
+<symbol id="i-sign" viewBox="0 0 32 32"><path d="M3 5h26M9 5v5M23 5v5"/><rect x="4" y="10" width="24" height="15" rx="1"/><path d="M9 16h14M9 20h9"/></symbol>
+<symbol id="i-cab" viewBox="0 0 32 32"><rect x="6" y="4" width="20" height="24" rx="1"/><path d="M16 4v24M12.5 14v4M19.5 14v4"/></symbol>
+<symbol id="i-music" viewBox="0 0 32 32"><circle cx="10" cy="24" r="3.5"/><circle cx="23" cy="21" r="3.5"/><path d="M13.5 24V8l13-3v16M13.5 12l13-3"/></symbol>
+<symbol id="i-proto" viewBox="0 0 32 32"><path d="M16 3l11.5 6.5v13L16 29 4.5 22.5v-13z"/><path d="M16 16l11.5-6.5M16 16L4.5 9.5M16 16v13"/></symbol>
+<symbol id="i-rotary" viewBox="0 0 32 32"><path d="M26 16a10 10 0 1 1-3-7.1"/><path d="M27 4v6h-6"/></symbol>
+<symbol id="i-slab" viewBox="0 0 32 32"><path d="M3 17l13-6.5L29 17l-13 6.5z"/><path d="M3 17v4l13 6.5L29 21v-4"/></symbol>
+<symbol id="i-drum" viewBox="0 0 32 32"><ellipse cx="16" cy="9" rx="10" ry="4"/><path d="M6 9v14c0 2.2 4.5 4 10 4s10-1.8 10-4V9"/></symbol>
+<symbol id="i-design" viewBox="0 0 32 32"><path d="M5 27l1.6-6.4L22.5 4.7l4.8 4.8L11.4 25.4z"/><path d="M19.5 7.7l4.8 4.8"/></symbol>
+</defs></svg>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar" id="top">
+  <div class="wrap bar-in">
+    <a class="brand" href="#top" aria-label="Morton Millworks, back to top"><svg viewBox="0 0 34 30" aria-hidden="true"><use href="#mark"/></svg><span>Morton Millworks</span></a>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#video">Watch</a></li>
+        <li><a href="#shop">The Shop</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-sm bar-quote" href="#contact">Get a Quote</a>
   </div>
-
-  <h1 class="wordmark">
-    <span class="m1">Morton</span>
-    <span class="m2">Millworks</span>
-  </h1>
-
-  <div class="centerline" aria-hidden="true">
-    <i></i>
-    <div class="mark" aria-hidden="true">
-      <svg viewBox="0 0 34 30" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="17" cy="5" r="2.3" fill="none" stroke="#24402F" stroke-width="1.5"/>
-        <line x1="17" y1="7.3" x2="8" y2="26" stroke="#24402F" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="17" y1="7.3" x2="26" y2="26" stroke="#24402F" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="10.5" y1="16.5" x2="23.5" y2="16.5" stroke="#B08642" stroke-width="1.3" stroke-linecap="round"/>
-        <line x1="8" y1="26" x2="6.5" y2="29" stroke="#24402F" stroke-width="1.1" stroke-linecap="round"/>
-        <rect x="24.5" y="24.5" width="3" height="4" rx="0.5" fill="#24402F"/>
-      </svg>
-    </div>
-    <i></i>
-  </div>
-
-  <p class="tagline">Custom Millwork &middot; Veteran Owned &middot; Colorado Springs, CO</p>
-  <p class="hero-note">Every piece designed and built in-house.</p>
 </header>
 
-<section class="wrap" id="services">
-  <h2>Services</h2>
-  <ul class="services">
-    <li>Custom Fabrication</li>
-    <li>Signage</li>
-    <li>Furniture &amp; Cabinetry</li>
-    <li>Musical Instruments</li>
-    <li>Prototyping</li>
-    <li>Rotary &amp; 3D Carving</li>
-    <li>Table &amp; Slab Flattening</li>
-    <li>Drum Sanding</li>
-    <li>Design &amp; CAD Work</li>
-  </ul>
-</section>
+<main id="main">
 
-<section class="wrap" id="cnc">
-  <h2>CNC Machining</h2>
-  <p class="cap-lead">Two machines, sized for different work. Both run from drawings I make or prepare myself.</p>
-
-  <div class="cap-machine">
-    <h3>ShopSabre IS 408</h3>
-    <p class="cap-spec">8' &times; 5' &times; 12" cutting area</p>
-    <p>The main production machine. A vacuum bed holds full sheets and awkward parts without clamps in the way, an automatic tool changer runs multi-tool jobs, and a heavy-duty dust collection system of its own keeps the shop clean. A fourth axis handles rotary work on turned and carved round pieces.</p>
-    <div class="cap-photos">
-      <div class="photo-slot">
-        <img src="images/shopsabre-is408.jpg" alt="ShopSabre IS 408 CNC router with vacuum bed and dust collection" loading="lazy">
-        <span>ShopSabre IS 408</span>
-      </div>
-      <div class="photo-slot">
-        <img src="images/shopsabre-rotary.jpg" alt="Fourth-axis rotary setup on the ShopSabre holding a timber" loading="lazy">
-        <span>Fourth-axis rotary</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="cap-machine">
-    <h3>Shark HD520</h3>
-    <p class="cap-spec">4' &times; 2' &times; 7" cutting area</p>
-    <p>A smaller machine set up for detail work: fine carving, small parts, and the jobs where the big router would be overkill.</p>
-    <div class="cap-photos">
-      <div class="photo-slot">
-        <img src="images/shark-hd520.jpg" alt="Shark HD520 CNC router with a glued maple panel clamped to the bed" loading="lazy">
-        <span>Shark HD520</span>
-      </div>
-      <div class="photo-slot">
-        <img src="images/shark-hd520-detail.jpg" alt="Close-up of the Shark HD520 spindle cutting a plywood part" loading="lazy">
-        <span>Detail cutting</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="cap-machine">
-    <h3>CNC Services</h3>
-    <ul class="services">
-      <li>Design &amp; CAD Work</li>
-      <li>Sheet Cutting &amp; Nesting</li>
-      <li>Carving &amp; Engraving</li>
-      <li>Signs &amp; Lettering</li>
-      <li>3D Relief Carving</li>
-      <li>Rotary (4th-Axis) Work</li>
-      <li>Pocketing &amp; Joinery</li>
-      <li>Templates &amp; Jigs</li>
-      <li>Prototypes &amp; Short Runs</li>
-      <li>Table &amp; Slab Flattening</li>
-      <li>24" Drum Sanding</li>
-    </ul>
-  </div>
-</section>
-
-<section class="wrap" id="about">
-  <h2>About</h2>
-  <p>Morton Millworks is the workshop of Andrew Morton, an Air Force veteran, in Colorado Springs. I'm a craftsman and an artist, and what I do best is bring ideas into the real world: moving atoms around to make something that didn't exist before.</p>
-  <p>The shop is built for that. Two CNC routers work alongside a 1948 planer, a 1946 jointer and a 16-inch radial arm saw, with a welder ready for when a piece calls for steel. The machines are part of the process, not the point. Wood, metal, carving, mechanisms: whatever a piece needs, I find a way to work it in.</p>
-  <p>Every piece is designed and built here, by one person, from the first sketch to the last coat. That means fewer projects, each given proper attention.</p>
-  <p>If you have something in mind, even just a rough idea, <a href="mailto:andrew@mortonmillworks.com">send me an email</a> and we'll talk it through.</p>
-</section>
-
-<section class="wrap" id="work">
-  <h2>Recent Work</h2>
-  <div class="work-grid">
-    <div class="photo-slot">
-      <img src="images/dragon-panel.jpg" alt="Hand-painted carved dragon panel, Morton Millworks" loading="lazy">
-      <span>Carved &amp; Painted Panel</span>
-    </div>
-    <div class="photo-slot">
-      <img src="images/oz-book-box.jpg" alt="Engraved wood keepsake box, Morton Millworks" loading="lazy">
-      <span>Engraved Keepsake Box</span>
-    </div>
-    <div class="photo-slot">
-      <img src="images/med-spa-sign.jpg" alt="Monumental Med Spa wood sign, Morton Millworks" loading="lazy">
-      <span>Business Signage</span>
-    </div>
-  </div>
-  <p class="work-more"><a href="gallery.html">See the full gallery &rarr;</a></p>
-</section>
-
-<section class="contact">
+<section class="hero">
   <div class="wrap">
-    <h2>Get In Touch</h2>
-    <a class="contact-email" href="mailto:andrew@mortonmillworks.com">andrew@mortonmillworks.com</a>
-    <div class="contact-block">
-      50 Mount View Lane Unit D<br>
-      Colorado Springs CO 80907<br>
-      720 280 2659
+    <div class="sheet">
+      <div class="ticks" aria-hidden="true"><i style="left:25%"></i><i style="left:50%"></i><i style="left:75%"></i></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 class="wordmark"><span class="m1">Morton</span><span class="m2">Millworks</span></h1>
+          <div class="centerline" aria-hidden="true"><i></i><svg viewBox="0 0 34 30"><use href="#mark"/></svg><i></i></div>
+          <p class="tagline">Custom Millwork &middot; Veteran Owned &middot; Colorado Springs, CO</p>
+          <p class="hero-note">Every piece designed and built <span class="nb">in-house</span>.</p>
+          <p class="cta-row"><a class="btn" href="#contact">Request a Quote</a><a class="btn btn-line" href="#video">Watch It Get Made</a></p>
+        </div>
+        <div class="plates" role="group" aria-label="Recent pieces"><figure><a href="images/vault-door-finished.jpg" data-lb="work" data-key="vault-door-finished" data-cap="The Book Vault Door" data-piece="The Book Vault Door" data-ask="A door or panel" data-entry><img src="images/t/vault-door-finished.jpg" srcset="images/h/vault-door-finished-480.jpg 480w, images/t/vault-door-finished.jpg 720w" sizes="(max-width: 899px) 40vw, 240px" width="720" height="1281" alt="Aged-steel finish vault door with ship&#x27;s wheel and hinges" fetchpriority="high"></a></figure><figure><a href="images/oz-book-box.jpg" data-lb="work" data-key="oz-book-box" data-cap="Engraved Keepsake Box" data-piece="Engraved Keepsake Box" data-ask="Carving or engraving" data-entry><img src="images/t/oz-book-box.jpg" srcset="images/h/oz-book-box-480.jpg 480w, images/t/oz-book-box.jpg 720w" sizes="(max-width: 899px) 48vw, 330px" width="720" height="616" alt="Engraved wood keepsake box with a Wonderful Wizard of Oz book-cover design" decoding="async"></a></figure><figure><a href="images/med-spa-sign.jpg" data-lb="work" data-key="med-spa-sign" data-cap="Business Signage" data-piece="Business Signage" data-ask="A sign" data-entry><img src="images/t/med-spa-sign.jpg" srcset="images/h/med-spa-sign-480.jpg 480w, images/t/med-spa-sign.jpg 720w" sizes="(max-width: 899px) 48vw, 330px" width="720" height="405" alt="Monumental Med Spa wood sign" decoding="async"></a></figure></div>
+      </div>
+      <dl class="titleblock">
+        <div><dt>Owner</dt><dd>Air Force veteran</dd></div>
+        <div><dt>Built</dt><dd>Designed &amp; built <span class="nb">in-house</span></dd></div>
+        <div><dt>Largest bed</dt><dd>8&prime; &times; 5&prime; &times; 12&Prime;</dd></div>
+        <div><dt>Shop</dt><dd>Colorado Springs, CO</dd></div>
+      </dl>
     </div>
   </div>
 </section>
 
-<footer>&copy; <span id="year"></span> Morton Millworks</footer>
+<section class="sec band-deep" id="services">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="label">Services</h2><p class="sec-title">Custom pieces and CNC work, built in one shop.</p></div>
+    <ul class="svc"><li><a class="svc-a" href="#work" data-go="filter:doors"><svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-fab"/></svg><span class="svc-t"><b>Custom Fabrication</b><small>See examples &rarr;</small></span></a></li><li><a class="svc-a" href="#work" data-go="filter:signs"><svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-sign"/></svg><span class="svc-t"><b>Signage</b><small>See examples &rarr;</small></span></a></li><li><a class="svc-a" href="#work" data-go="filter:builds"><svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-cab"/></svg><span class="svc-t"><b>Furniture &amp; Cabinetry</b><small>See examples &rarr;</small></span></a></li><li><a class="svc-a" href="#contact" data-go="ask:A musical instrument"><svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-music"/></svg><span class="svc-t"><b>Musical Instruments</b><small>Ask about it &rarr;</small></span></a></li><li><a class="svc-a" href="#contact" data-go="ask:A prototype or short run"><svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-proto"/></svg><span class="svc-t"><b>Prototyping</b><small>Ask about it &rarr;</small></span></a></li><li><a class="svc-a" href="#work" data-go="filter:carving"><svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-rotary"/></svg><span class="svc-t"><b>Rotary &amp; 3D Carving</b><small>See examples &rarr;</small></span></a></li><li><a class="svc-a" href="#contact" data-go="ask:Slab flattening or drum sanding"><svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-slab"/></svg><span class="svc-t"><b>Table &amp; Slab Flattening</b><small>Ask about it &rarr;</small></span></a></li><li><a class="svc-a" href="#contact" data-go="ask:Slab flattening or drum sanding"><svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-drum"/></svg><span class="svc-t"><b>Drum Sanding</b><small>Ask about it &rarr;</small></span></a></li><li><a class="svc-a" href="#contact" data-go="ask:Design or CAD work"><svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-design"/></svg><span class="svc-t"><b>Design &amp; CAD Work</b><small>Ask about it &rarr;</small></span></a></li></ul>
+    <p class="svc-cta">Have something in mind, even a rough idea? <a href="#contact">Send it over</a> and we&rsquo;ll talk it through.</p>
+  </div>
+</section>
+
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="label">Recent Work</h2><p class="sec-title">Pieces from the shop floor.</p><p class="lead">Pick a type, or tap any photo to see it larger.</p></div>
+    <div class="chips" role="group" aria-label="Show recent work by type"><button class="chip" type="button" data-f="all" aria-pressed="true">All <span>11</span></button><button class="chip" type="button" data-f="signs" aria-pressed="false">Signs <span>3</span></button><button class="chip" type="button" data-f="doors" aria-pressed="false">Doors &amp; Panels <span>3</span></button><button class="chip" type="button" data-f="builds" aria-pressed="false">Furniture &amp; Builds <span>3</span></button><button class="chip" type="button" data-f="carving" aria-pressed="false">Carving &amp; Engraving <span>4</span></button></div>
+    <p class="status" id="work-status" aria-live="polite"></p>
+    <div class="sub-group" id="g-stories"><h3 class="sub">Three builds, start to finish</h3><article class="story" data-cat="doors"><div class="story-txt"><h3>The Book Vault Door</h3><p>Carved in the shop, then finished to look like aged steel.</p></div><div class="srow"><figure style="--r:1.7798"><a href="images/vault-door-carved.jpg" data-lb="work" data-key="vault-door-carved" data-cap="The Book Vault Door — carved" data-piece="The Book Vault Door" data-ask="A door or panel"><img src="images/t/vault-door-carved.jpg" width="720" height="405" alt="Carved vault door panel before finishing" loading="lazy" decoding="async"></a><figcaption><b>1</b>Carved</figcaption></figure><figure style="--r:0.5619"><a href="images/vault-door-finished.jpg" data-lb="work" data-key="vault-door-finished" data-cap="The Book Vault Door — finished" data-piece="The Book Vault Door" data-ask="A door or panel"><img src="images/t/vault-door-finished.jpg" width="720" height="1281" alt="Aged-steel finish vault door with ship&#x27;s wheel and hinges" loading="lazy" decoding="async"></a><figcaption><b>2</b>Finished</figcaption></figure></div></article><article class="story" data-cat="doors carving"><div class="story-txt"><h3>The Dragon Door</h3><p>Cut on the ShopSabre, hand-painted, then installed as an interior door.</p></div><div class="srow"><figure style="--r:0.5621"><a href="images/cnc-dragon-cutting.jpg" data-lb="work" data-key="cnc-dragon-cutting" data-cap="The Dragon Door — cut on the cnc" data-piece="The Dragon Door" data-ask="A door or panel"><img src="images/t/cnc-dragon-cutting.jpg" width="720" height="1281" alt="CNC router mid-cut on the dragon panel" loading="lazy" decoding="async"></a><figcaption><b>1</b>Cut on the CNC</figcaption></figure><figure style="--r:0.5621"><a href="images/dragon-panel.jpg" data-lb="work" data-key="dragon-panel" data-cap="The Dragon Door — painted" data-piece="The Dragon Door" data-ask="A door or panel"><img src="images/t/dragon-panel.jpg" width="720" height="1281" alt="Hand-painted carved dragon panel" loading="lazy" decoding="async"></a><figcaption><b>2</b>Painted</figcaption></figure><figure style="--r:0.562"><a href="images/dragon-door-installed.jpg" data-lb="work" data-key="dragon-door-installed" data-cap="The Dragon Door — installed" data-piece="The Dragon Door" data-ask="A door or panel"><img src="images/t/dragon-door-installed.jpg" width="562" height="1000" alt="The dragon panel installed as an interior door in a hallway" loading="lazy" decoding="async"></a><figcaption><b>3</b>Installed</figcaption></figure></div></article><article class="story" data-cat="signs carving"><div class="story-txt"><h3>Vintage Book Shoppe Sign</h3><p>Built up in layers, carved, then painted.</p></div><div class="srow"><figure style="--r:0.75"><a href="images/raw-sign-layers.jpg" data-lb="work" data-key="raw-sign-layers" data-cap="Vintage Book Shoppe Sign — layers" data-piece="Vintage Book Shoppe Sign" data-ask="A sign"><img src="images/t/raw-sign-layers.jpg" width="720" height="960" alt="Vintage Book Shoppe sign built up in layers, with the top layer lifted" loading="lazy" decoding="async"></a><figcaption><b>1</b>Layers</figcaption></figure><figure style="--r:1.7789"><a href="images/vintage-book-shoppe-sign.jpg" data-lb="work" data-key="vintage-book-shoppe-sign" data-cap="Vintage Book Shoppe Sign — carved" data-piece="Vintage Book Shoppe Sign" data-ask="A sign"><img src="images/t/vintage-book-shoppe-sign.jpg" width="720" height="405" alt="Vintage Book Shoppe routed wood sign" loading="lazy" decoding="async"></a><figcaption><b>2</b>Carved</figcaption></figure><figure style="--r:0.75"><a href="images/vintage-book-shoppe-painted.jpg" data-lb="work" data-key="vintage-book-shoppe-painted" data-cap="Vintage Book Shoppe Sign — painted" data-piece="Vintage Book Shoppe Sign" data-ask="A sign"><img src="images/t/vintage-book-shoppe-painted.jpg" width="720" height="960" alt="Painted Vintage Book Shoppe sign in yellow, blue and red" loading="lazy" decoding="async"></a><figcaption><b>3</b>Painted</figcaption></figure></div></article></div>
+    <div class="sub-group" id="g-more"><h3 class="sub">More recent work</h3><div class="masonry"><figure class="mfig" data-cat="carving"><a href="images/oz-book-box.jpg" data-lb="work" data-key="oz-book-box" data-cap="Engraved Keepsake Box" data-piece="Engraved Keepsake Box" data-ask="Carving or engraving"><img src="images/t/oz-book-box.jpg" width="720" height="616" alt="Engraved wood keepsake box with a Wonderful Wizard of Oz book-cover design" loading="lazy" decoding="async"></a><figcaption><b>Fig. 01</b>Engraved Keepsake Box</figcaption></figure><figure class="mfig" data-cat="signs"><a href="images/burdick-sign.jpg" data-lb="work" data-key="burdick-sign" data-cap="Custom Business Sign" data-piece="Custom Business Sign" data-ask="A sign"><img src="images/t/burdick-sign.jpg" width="720" height="541" alt="Burdick Mushrooms engraved sign" loading="lazy" decoding="async"></a><figcaption><b>Fig. 02</b>Custom Business Sign</figcaption></figure><figure class="mfig" data-cat="builds"><a href="images/lego-table.jpg" data-lb="work" data-key="lego-table" data-cap="Custom Build Table" data-piece="Custom Build Table" data-ask="Furniture or cabinetry"><img src="images/t/lego-table.jpg" width="720" height="405" alt="Kids&#x27; LEGO building table with turntable" loading="lazy" decoding="async"></a><figcaption><b>Fig. 03</b>Custom Build Table</figcaption></figure><figure class="mfig" data-cat="builds"><a href="images/white-panel-cabinet.jpg" data-lb="work" data-key="white-panel-cabinet" data-cap="Panel Cabinet" data-piece="Panel Cabinet" data-ask="Furniture or cabinetry"><img src="images/t/white-panel-cabinet.jpg" width="720" height="960" alt="White panel cabinet box with rectangular cutouts" loading="lazy" decoding="async"></a><figcaption><b>Fig. 04</b>Panel Cabinet</figcaption></figure><figure class="mfig" data-cat="signs"><a href="images/med-spa-sign.jpg" data-lb="work" data-key="med-spa-sign" data-cap="Business Signage" data-piece="Business Signage" data-ask="A sign"><img src="images/t/med-spa-sign.jpg" width="720" height="405" alt="Monumental Med Spa wood sign" loading="lazy" decoding="async"></a><figcaption><b>Fig. 05</b>Business Signage</figcaption></figure><figure class="mfig" data-cat="builds"><a href="images/space-wall-art.jpg" data-lb="work" data-key="space-wall-art" data-cap="Modular Wall Art" data-piece="Modular Wall Art" data-ask="Something else"><img src="images/t/space-wall-art.jpg" width="720" height="405" alt="Space-themed modular wall art" loading="lazy" decoding="async"></a><figcaption><b>Fig. 06</b>Modular Wall Art</figcaption></figure><figure class="mfig" data-cat="carving"><a href="images/carving-detail.jpg" data-lb="work" data-key="carving-detail" data-cap="Detail Work" data-piece="Detail Work" data-ask="Carving or engraving"><img src="images/t/carving-detail.jpg" width="720" height="1281" alt="Close-up of a carved mold and badge detail" loading="lazy" decoding="async"></a><figcaption><b>Fig. 07</b>Detail Work</figcaption></figure><figure class="mfig" data-cat="doors"><a href="images/cnc-door-panel.jpg" data-lb="work" data-key="cnc-door-panel" data-cap="On the CNC" data-piece="On the CNC" data-ask="A door or panel"><img src="images/t/cnc-door-panel.jpg" width="720" height="405" alt="CNC router cutting a raised-panel door" loading="lazy" decoding="async"></a><figcaption><b>Fig. 08</b>On the CNC</figcaption></figure></div></div>
+  </div>
+</section>
+
+<section class="sec band-night on-dark" id="video">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="label">Video</h2><p class="sec-title">Watch it get made.</p><p class="lead">Short clips from the shop floor.</p></div>
+    <div class="clips"><figure class="clip"><div class="vbox"><video controls playsinline preload="none" width="720" height="1280" data-poster="images/poster-shopsabre-in-motion.jpg" aria-label="The ShopSabre in motion"><source src="videos/shopsabre-in-motion.mp4" type="video/mp4">Your browser cannot play this clip.</video><button class="vplay" type="button" aria-label="Play: The ShopSabre in motion, 0:19"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22"/><path d="M19 15l16 9-16 9z"/></svg><span>0:19</span></button></div><figcaption><b>V-1</b>The ShopSabre in motion</figcaption></figure><figure class="clip"><div class="vbox"><video controls playsinline preload="none" width="720" height="1280" data-poster="images/poster-rounded-cutouts.jpg" aria-label="Rounded cutouts"><source src="videos/rounded-cutouts.mp4" type="video/mp4">Your browser cannot play this clip.</video><button class="vplay" type="button" aria-label="Play: Rounded cutouts, 0:21"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22"/><path d="M19 15l16 9-16 9z"/></svg><span>0:21</span></button></div><figcaption><b>V-2</b>Rounded cutouts</figcaption></figure><figure class="clip"><div class="vbox"><video controls playsinline preload="none" width="720" height="1280" data-poster="images/poster-tracing-cutouts.jpg" aria-label="Tracing cutouts"><source src="videos/tracing-cutouts.mp4" type="video/mp4">Your browser cannot play this clip.</video><button class="vplay" type="button" aria-label="Play: Tracing cutouts, 0:06"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22"/><path d="M19 15l16 9-16 9z"/></svg><span>0:06</span></button></div><figcaption><b>V-3</b>Tracing cutouts</figcaption></figure></div>
+  </div>
+</section>
+
+<section class="sec" id="shop">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="label">CNC Machining</h2><p class="sec-title">Two machines, sized for different work.</p><p class="lead">Both run from drawings I make or prepare myself.</p></div>
+    <article class="machine"><div class="m-txt"><h3>ShopSabre IS 408</h3><p class="spec"><b>8&prime; &times; 5&prime; &times; 12&Prime;</b><span class="dimline" aria-hidden="true"></span><small>Cutting area</small></p><p>The main production machine. A vacuum bed holds full sheets and awkward parts without clamps in the way, an automatic tool changer runs multi-tool jobs, and a heavy-duty dust collection system of its own keeps the shop clean. A fourth axis handles rotary work on turned and carved round pieces.</p></div><div class="srow"><figure style="--r:1.7798"><a href="images/shopsabre-is408.jpg" data-lb="machines" data-key="shopsabre-is408" data-cap="ShopSabre IS 408" data-piece="ShopSabre IS 408" data-ask="CNC cutting from my own design"><img src="images/t/shopsabre-is408.jpg" width="720" height="405" alt="ShopSabre IS 408 CNC router with vacuum bed and dust collection" loading="lazy" decoding="async"></a><figcaption><b>Fig. 09</b>ShopSabre IS 408</figcaption></figure><figure style="--r:1.7798"><a href="images/shopsabre-rotary.jpg" data-lb="machines" data-key="shopsabre-rotary" data-cap="Fourth-axis rotary" data-piece="ShopSabre IS 408" data-ask="CNC cutting from my own design"><img src="images/t/shopsabre-rotary.jpg" width="720" height="405" alt="Fourth-axis rotary setup on the ShopSabre holding a timber" loading="lazy" decoding="async"></a><figcaption><b>Fig. 10</b>Fourth-axis rotary</figcaption></figure></div></article><article class="machine"><div class="m-txt"><h3>Shark HD520</h3><p class="spec"><b>4&prime; &times; 2&prime; &times; 7&Prime;</b><span class="dimline" aria-hidden="true"></span><small>Cutting area</small></p><p>A smaller machine set up for detail work: fine carving, small parts, and the jobs where the big router would be overkill.</p></div><div class="srow"><figure style="--r:0.5619"><a href="images/shark-hd520.jpg" data-lb="machines" data-key="shark-hd520" data-cap="Shark HD520" data-piece="Shark HD520" data-ask="CNC cutting from my own design"><img src="images/t/shark-hd520.jpg" width="720" height="1281" alt="Shark HD520 CNC router with a glued maple panel clamped to the bed" loading="lazy" decoding="async"></a><figcaption><b>Fig. 11</b>Shark HD520</figcaption></figure><figure style="--r:1.7798"><a href="images/shark-hd520-detail.jpg" data-lb="machines" data-key="shark-hd520-detail" data-cap="Detail cutting" data-piece="Shark HD520" data-ask="CNC cutting from my own design"><img src="images/t/shark-hd520-detail.jpg" width="720" height="405" alt="Close-up of the Shark HD520 spindle cutting a plywood part" loading="lazy" decoding="async"></a><figcaption><b>Fig. 12</b>Detail cutting</figcaption></figure></div></article>
+    <div class="cnc-more">
+      <h3>CNC Services</h3>
+      <div>
+        <ol class="sched"><li>Design &amp; CAD Work</li><li>Sheet Cutting &amp; Nesting</li><li>Carving &amp; Engraving</li><li>Signs &amp; Lettering</li><li>3D Relief Carving</li><li>Rotary (4th-Axis) Work</li><li>Pocketing &amp; Joinery</li><li>Templates &amp; Jigs</li><li>Prototypes &amp; Short Runs</li><li>Table &amp; Slab Flattening</li><li>24&Prime; Drum Sanding</li></ol>
+        <p class="irons"><b>Also in the shop</b>A 1948 planer, a 1946 jointer, a 16-inch radial arm saw and a welder.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec band-deep" id="about">
+  <div class="wrap about-grid">
+    <div><h2 class="label">About</h2><p class="sec-title">Bringing ideas into the real world.</p></div>
+    <div class="prose">
+      <p>Morton Millworks is the workshop of Andrew Morton, an Air Force veteran, in Colorado Springs. I&rsquo;m a craftsman and an artist, and what I do best is bring ideas into the real world: moving atoms around to make something that didn&rsquo;t exist before.</p>
+      <p>The shop is built for that. Two CNC routers work alongside a 1948 planer, a 1946 jointer and a 16-inch radial arm saw, with a welder ready for when a piece calls for steel. The machines are part of the process, not the point. Wood, metal, carving, mechanisms: whatever a piece needs, I find a way to work it in.</p>
+      <p>Every piece is designed and built here, by one person, from the first sketch to the last coat. That means fewer projects, each given proper attention.</p>
+      <p>If you have something in mind, even just a rough idea, <a href="mailto:andrew@mortonmillworks.com">send me an email</a> and we&rsquo;ll talk it through.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap faq-grid">
+    <div><h2 class="label">Questions</h2><p class="sec-title">Quick answers.</p></div>
+    <div>
+      <div class="faq"><details><summary>How big a piece can you cut?</summary><p>The ShopSabre IS 408 cuts an area of 8&prime; &times; 5&prime; and 12&Prime; deep, and its vacuum bed holds full sheets. The Shark HD520 handles smaller work, 4&prime; &times; 2&prime; and 7&Prime; deep.</p></details><details><summary>Do you take one-off pieces and short runs?</summary><p>Yes. One-of-a-kind pieces, prototypes and short runs are all part of the work. Every piece is designed and built here by one person, which means fewer projects, each given proper attention.</p></details><details><summary>What do you build with?</summary><p>Wood, metal, carving, mechanisms: whatever a piece needs. There is a welder in the shop for when a piece calls for steel.</p></details><details><summary>What should I send to get started?</summary><p>Even a rough idea is enough. Describe what you have in mind in the form below, and attach a sketch or photo in the email that opens. Then we&rsquo;ll talk it through.</p></details></div>
+      <p class="faq-more">Something else? <a href="#contact">Ask in the form below.</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec band-green on-dark" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="sec-head"><h2 class="label">Get In Touch</h2><p class="sec-title">Tell me what you have in mind.</p><p class="lead">Even a rough idea is enough to start.</p></div>
+      <form id="quote">
+        <p class="draft" id="q-draft" hidden><span>We kept what you started typing on this device.</span><button class="linkbtn" id="q-clear" type="button">Start over</button></p>
+        <div class="frow">
+          <div class="f"><label for="q-name">Name</label><input id="q-name" name="name" autocomplete="name" required></div>
+          <div class="f"><label for="q-email">Email</label><input id="q-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="frow">
+          <div class="f"><label for="q-phone">Phone (optional)</label><input id="q-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"></div>
+          <div class="f"><label for="q-type">What do you need?</label>
+            <select id="q-type" name="type" required>
+              <option value="" selected disabled>Choose one</option>
+              <option>A sign</option><option>Furniture or cabinetry</option><option>A door or panel</option><option>Carving or engraving</option>
+              <option>A musical instrument</option><option>A prototype or short run</option><option>CNC cutting from my own design</option>
+              <option>Design or CAD work</option><option>Slab flattening or drum sanding</option><option>Something else</option>
+            </select></div>
+        </div>
+        <div class="f"><label for="q-when">When do you need it?</label>
+          <select id="q-when" name="when"><option>No rush</option><option>Within a month</option><option>In the next few months</option><option>I have a deadline (details below)</option></select></div>
+        <div class="f"><label for="q-details">Details</label><textarea id="q-details" name="details" rows="5" required placeholder="Size, material, where it will go. Rough ideas are fine."></textarea></div>
+        <p class="tip">Have a sketch or a photo? Attach it in the email that opens.</p>
+        <button class="btn" type="submit">Email My Inquiry</button>
+        <p class="ok" id="q-ok" role="status" hidden>If your email app did not open, send the details to <a href="mailto:andrew@mortonmillworks.com">andrew@mortonmillworks.com</a>.</p>
+      </form>
+    </div>
+    <div class="c-info">
+      <h3>Email</h3><p><a href="mailto:andrew@mortonmillworks.com">andrew@mortonmillworks.com</a></p>
+      <h3>Shop</h3><p>50 Mount View Lane, Unit D<br>Colorado Springs, CO 80907</p>
+      <div class="map"><iframe title="Map to Morton Millworks" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=50+Mount+View+Lane+Unit+D+Colorado+Springs+CO+80907&output=embed"></iframe></div>
+      <a class="btn btn-line btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=50+Mount+View+Lane+Unit+D+Colorado+Springs+CO+80907" target="_blank" rel="noopener">Get Directions</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot on-dark">
+  <div class="wrap"><small>&copy; <span id="yr">2026</span> Morton Millworks &middot; Colorado Springs, CO</small>
+    <span class="foot-links"><button class="linkbtn" id="site-share" type="button">Share this site</button><a href="#top">Back to top</a></span></div>
+</footer>
+
+<nav class="dock" id="dock" aria-label="Email or get a quote"><a class="btn btn-line" href="mailto:andrew@mortonmillworks.com">Email</a><a class="btn" href="#contact">Get a Quote</a></nav>
+
+<dialog class="lb on-dark" id="lb" aria-label="Photo viewer">
+  <div class="lb-top"><p class="lb-n" id="lb-n" aria-live="polite"></p><button class="lb-btn lb-x" type="button" aria-label="Close photo viewer">&times;</button></div>
+  <div class="lb-stage"><button class="lb-btn lb-prev" type="button" aria-label="Previous photo">&lsaquo;</button><img id="lb-img" alt=""><button class="lb-btn lb-next" type="button" aria-label="Next photo">&rsaquo;</button></div>
+  <div class="lb-info"><p class="lb-cap" id="lb-cap"></p>
+    <div class="lb-act"><button class="btn btn-sm" id="lb-ask" type="button">Ask about something like this</button><button class="btn btn-sm btn-line" id="lb-share" type="button">Share</button></div></div>
+  <div class="lb-strip" id="lb-strip" role="group" aria-label="All photos in this set"></div>
+</dialog>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+(function () {
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var coarse = !!(window.matchMedia && matchMedia('(pointer:coarse)').matches), still = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+  $('#yr').textContent = new Date().getFullYear();
+
+  /* ---- quote form: draft saving, and a way in from anywhere on the page ---- */
+  var form = $('#quote'), ok = $('#q-ok'), note = $('#q-draft'), KEY = 'mm-quote-draft', FIELDS = ['name', 'email', 'phone', 'type', 'when', 'details'];
+  function field(k) { return form.elements[k]; }
+  function saveDraft() {
+    try {
+      var o = {}, any = false;
+      FIELDS.forEach(function (k) { o[k] = field(k).value; if (o[k] && k !== 'when') any = true; });
+      if (any) localStorage.setItem(KEY, JSON.stringify(o)); else localStorage.removeItem(KEY);
+    } catch (e) {}
+  }
+  try {
+    var d = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if (d) { FIELDS.forEach(function (k) { if (d[k] != null) field(k).value = d[k]; }); note.hidden = false; }
+  } catch (e) {}
+  form.addEventListener('input', saveDraft); form.addEventListener('change', saveDraft);
+  $('#q-clear').addEventListener('click', function () { form.reset(); try { localStorage.removeItem(KEY); } catch (e) {} note.hidden = true; ok.hidden = true; });
+  function goQuote(type, line) {
+    var s = field('type'), t = field('details');
+    if (type) for (var i = 0; i < s.options.length; i++) { if (s.options[i].value === type) { s.selectedIndex = i; break; } }
+    if (line && t.value.indexOf(line) < 0) t.value = line + '\n' + t.value;
+    saveDraft();
+    $('#contact').scrollIntoView({ behavior: still ? 'auto' : 'smooth', block: 'start' });
+    if (!coarse) setTimeout(function () { var f = line ? t : field('name'); f.focus({ preventScroll: true }); if (line) f.setSelectionRange(f.value.length, f.value.length); }, 500);
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = function (k) { return String(field(k).value || '').trim(); };
+    var body = ['Name: ' + v('name'), 'Email: ' + v('email'), 'Phone: ' + (v('phone') || '(not given)'), 'Project: ' + v('type'), 'Needed: ' + v('when'), '', 'Details:', v('details')].join('\r\n');
+    var a = document.createElement('a');
+    a.href = 'mailto:andrew@mortonmillworks.com?subject=' + encodeURIComponent('Quote request: ' + v('type')) + '&body=' + encodeURIComponent(body);
+    document.body.appendChild(a); a.click(); a.remove();
+    try { localStorage.removeItem(KEY); } catch (e2) {}
+    note.hidden = true; ok.hidden = false;
+  });
+
+  /* ---- work: filter by type (services lead here too) ---- */
+  var chips = $$('.chip'), items = $$('[data-cat]'), groups = $$('.sub-group'), status = $('#work-status');
+  var WORD = { 1: 'A build, start to finish', 2: 'Two builds, start to finish', 3: 'Three builds, start to finish' };
+  function applyFilter(f) {
+    var n = 0;
+    chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.getAttribute('data-f') === f)); });
+    items.forEach(function (el) { var show = f === 'all' || (' ' + el.getAttribute('data-cat') + ' ').indexOf(' ' + f + ' ') > -1; el.hidden = !show; if (show) n++; });
+    groups.forEach(function (g) { g.hidden = !g.querySelector('[data-cat]:not([hidden])'); });
+    var st = $$('.story:not([hidden])').length; if (st) $('#g-stories .sub').textContent = WORD[st] || 'Builds, start to finish';
+    status.textContent = f === 'all' ? '' : 'Showing ' + n + ' of ' + items.length + ' pieces';
+  }
+  chips.forEach(function (c) { c.addEventListener('click', function () { applyFilter(c.getAttribute('data-f')); }); });
+  document.addEventListener('click', function (e) {
+    var g = e.target.closest('[data-go]'); if (!g) return;
+    var p = g.getAttribute('data-go').split(':'), kind = p.shift(), val = p.join(':');
+    if (kind === 'filter') applyFilter(val); else if (kind === 'ask') { e.preventDefault(); goQuote(val); }
+  });
+
+  /* ---- navigation: say where you are; keep the phone bar out of the way of the form ---- */
+  if ('IntersectionObserver' in window) {
+    var links = $$('.bar nav a[href^="#"]'), secs = links.map(function (a) { return $(a.getAttribute('href')); }), live = [];
+    var spy = new IntersectionObserver(function (es) {
+      es.forEach(function (en) { var i = secs.indexOf(en.target); if (i < 0) return; var at = live.indexOf(i); if (en.isIntersecting && at < 0) live.push(i); else if (!en.isIntersecting && at > -1) live.splice(at, 1); });
+      links.forEach(function (l, i) { if (i === live[0]) l.setAttribute('aria-current', 'true'); else l.removeAttribute('aria-current'); });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    secs.forEach(function (s) { if (s) spy.observe(s); });
+    var dock = $('#dock');
+    new IntersectionObserver(function (es) { dock.classList.toggle('away', es[0].isIntersecting); }, { threshold: 0.12 }).observe($('#contact'));
+  }
+
+  /* ---- video: posters load when the clips come near the screen; a play button sits on each ---- */
+  var vids = $$('video[data-poster]');
+  function poster(v) { v.poster = v.getAttribute('data-poster'); }
+  if ('IntersectionObserver' in window) { var po = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { poster(en.target); po.unobserve(en.target); } }); }, { rootMargin: '600px 0px' }); vids.forEach(function (v) { po.observe(v); }); } else vids.forEach(poster);
+  $$('.vbox').forEach(function (b) {
+    var v = $('video', b), p = $('.vplay', b);
+    p.addEventListener('click', function () { var r = v.play(); if (r && r.catch) r.catch(function () { v.controls = true; b.classList.add('on'); }); });
+    v.addEventListener('play', function () { b.classList.add('on'); $$('video').forEach(function (o) { if (o !== v) o.pause(); }); });
+    v.addEventListener('pause', function () { b.classList.remove('on'); });
+    v.addEventListener('ended', function () { b.classList.remove('on'); });
+  });
+
+  /* ---- sharing ---- */
+  function share(url, text, btn, label) {
+    if (navigator.share) { navigator.share({ title: 'Morton Millworks', text: text, url: url }).catch(function () {}); return; }
+    var done = function (m) { btn.textContent = m; setTimeout(function () { btn.textContent = label; }, 2200); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(function () { done('Link copied'); }, function () { done('Copy: ' + url); });
+    else done('Copy: ' + url);
+  }
+  $('#site-share').addEventListener('click', function () { share(location.href.split('#')[0], 'Morton Millworks, custom millwork in Colorado Springs', this, 'Share this site'); });
+
+  /* ---- photo viewer ---- */
+  var lb = $('#lb'), lbImg = $('#lb-img'), lbCap = $('#lb-cap'), lbN = $('#lb-n'), strip = $('#lb-strip'), shareBtn = $('#lb-share'), set = [], at = 0;
+  function setOf(a) { return $$('a[data-lb="' + a.getAttribute('data-lb') + '"]:not([data-entry])').filter(function (x) { return !x.closest('[hidden]'); }); }
+  function indexOf(s, a) { for (var i = 0; i < s.length; i++) if (s[i].href === a.href) return i; return -1; }
+  function show(n) {
+    at = (n + set.length) % set.length;
+    var a = set[at], im = a.querySelector('img');
+    lbImg.src = a.href; lbImg.alt = im ? im.alt : ''; lbCap.textContent = a.getAttribute('data-cap') || ''; lbN.textContent = (at + 1) + ' of ' + set.length;
+    $$('.lb-th', strip).forEach(function (b, i) {
+      if (i === at) { b.setAttribute('aria-current', 'true'); strip.scrollLeft = b.offsetLeft - (strip.clientWidth - b.offsetWidth) / 2; } else b.removeAttribute('aria-current');
+    });
+    [1, -1].forEach(function (d) { var x = set[(at + d + set.length) % set.length]; if (x) new Image().src = x.href; });
+  }
+  function openViewer(a) {
+    var s = setOf(a), i = indexOf(s, a);
+    if (i < 0) { applyFilter('all'); s = setOf(a); i = indexOf(s, a); }
+    set = s; strip.innerHTML = '';
+    s.forEach(function (x, j) {
+      var b = document.createElement('button'), t = document.createElement('img'), im = x.querySelector('img');
+      b.type = 'button'; b.className = 'lb-th'; b.setAttribute('aria-label', 'Photo ' + (j + 1) + ' of ' + s.length + ': ' + (x.getAttribute('data-cap') || ''));
+      t.src = im ? im.getAttribute('src') : x.href; t.alt = ''; b.appendChild(t); b.addEventListener('click', function () { show(j); }); strip.appendChild(b);
+    });
+    shareBtn.textContent = 'Share';
+    lb.showModal(); document.documentElement.classList.add('lb-open'); show(i);
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[data-lb]');
+    if (!a || typeof lb.showModal !== 'function') return;
+    e.preventDefault(); openViewer(a);
+  });
+  lb.addEventListener('close', function () { document.documentElement.classList.remove('lb-open'); lbImg.removeAttribute('src'); });
+  lb.addEventListener('click', function (e) {
+    if (e.target.closest('.lb-prev')) show(at - 1);
+    else if (e.target.closest('.lb-next')) show(at + 1);
+    else if (e.target.closest('.lb-x')) lb.close();
+    else if (!e.target.closest('#lb-img, .lb-info, .lb-strip, .lb-n')) lb.close();
+  });
+  lb.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') show(at + 1); else if (e.key === 'ArrowLeft') show(at - 1); });
+  $('#lb-ask').addEventListener('click', function () {
+    var a = set[at]; lb.close();
+    goQuote(a.getAttribute('data-ask'), "I'm interested in something like: " + (a.getAttribute('data-piece') || a.getAttribute('data-cap')) + '.');
+  });
+  shareBtn.addEventListener('click', function () {
+    var a = set[at];
+    share(location.href.split('#')[0] + '#p-' + a.getAttribute('data-key'), (a.getAttribute('data-piece') || 'A piece') + ' at Morton Millworks, Colorado Springs', shareBtn, 'Share');
+  });
+  var x0 = null, stage = $('.lb-stage');
+  stage.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  stage.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 50) show(at + (dx < 0 ? 1 : -1)); });
+  var m = /^#p-([\w-]+)$/.exec(location.hash);
+  if (m && typeof lb.showModal === 'function') { var t0 = $('a[data-key="' + m[1] + '"]:not([data-entry])'); if (t0) openViewer(t0); }
+})();
 </script>
 
+
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "467f1c969f9f4221926b728ee063d70a"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
-</html>
+</body></html>
